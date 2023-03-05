@@ -3,19 +3,7 @@ const site = 'https://jsonplaceholder.typicode.com/posts';
 const headers = { 'Content-type': 'application/json; charset=UTF-8' };
 
 const sendData = (site, data, headers) => {
-  fetch(site, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers,
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      return Promise.reject(response);
-    })
-    .then((json) => console.log(json))
-    .catch((err) => console.log(err));
+  console.log(data);
 };
 
 const getData = (source) => {
